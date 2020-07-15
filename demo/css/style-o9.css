@@ -1,0 +1,764 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,600,600i,700,700i,800,800i");
+@import url("https://fonts.googleapis.com/css?family=Inconsolata&display=swap");
+*,
+*:after,
+*::before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  background: #FFFFFF;
+  color: #333333;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.6rem;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: #4285F4;
+  text-decoration: none;
+}
+
+/* --------------------------------
+
+Main components
+
+-------------------------------- */
+header {
+  text-align: center;
+  padding: 80px 0px 75px 0px;
+  margin-bottom: 0px;
+  background-color: transparent;
+  color: #FFFFFF;
+}
+
+header div {
+  display: block;
+  background-image: url("../img/bg.svg");
+  background-color: #2864FF;
+  background-position: top;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 15rem;
+  z-index: -1;
+  transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+  transform: scale(1);
+}
+
+header:hover div {
+  transform: scale(1.05);
+}
+
+header:hover h1 {
+  transform: scale(1.025);
+}
+
+header:hover span {
+  margin-top: 1em;
+  transform: scale(1.02);
+}
+
+header h1 {
+  font-size: 2.55rem;
+  transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+  transform: scale(1);
+}
+
+header span {
+  font-size: 0.8rem;
+  transition: 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+  transform: scale(1);
+}
+
+header p {
+  font-size: 1.2rem;
+  margin-top: 1em;
+}
+
+header a {
+  color: #FCB305;
+}
+
+header a:hover {
+  text-decoration: underline;
+}
+
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+ul li {
+  border-radius: 0.25em;
+  transition: background 0.2s;
+  user-select: none;
+  overflow: hidden;
+  text-align: center;
+  padding: 1em;
+  width: 16rem;
+}
+
+ul li:hover {
+  background: rgba(40, 100, 255, 0.1);
+}
+
+ul p, ul em, ul input {
+  display: block;
+  font-size: 1.1rem;
+  color: rgba(0, 0, 0, 0.6);
+  -webkit-user-select: auto;
+  -moz-user-select: auto;
+  -ms-user-select: auto;
+  user-select: auto;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  cursor: pointer;
+  max-width: 16rem;
+}
+
+ul i {
+  color: #222222;
+}
+
+ul p {
+  color: #333333;
+  padding: 8px 0;
+  font-size: 0.9rem;
+  line-height: 1rem;
+}
+
+ul p::selection, ul em::selection {
+  background: #2864FF;
+  color: #fff;
+}
+
+ul p::-moz-selection, ul em::-moz-selection {
+  background: #2864FF;
+  color: #fff;
+}
+
+ul em {
+  margin-bottom: 8px;
+  color: #888888;
+  font-size: 0.8rem;
+  line-height: 0.9rem;
+}
+
+ul em::before {
+  content: "[";
+}
+
+ul em::after {
+  content: "]";
+}
+
+ul input {
+  text-align: center;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  outline: none;
+}
+
+.first-section {
+  margin-top: 3rem;
+}
+
+.sub-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 48px 0 48px 0;
+  border-top: 1px solid #2864FF;
+}
+
+.sub-header > h1 {
+  background-color: #2864FF;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1.1rem;
+  color: #FFFFFF;
+  width: 18rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  margin: 0 auto;
+  border-radius: 0 0 8px 8px;
+}
+
+.new-section-tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0px auto 2rem auto;
+}
+
+.new-section-tags > p {
+  font-family: "Inconsolata", monospace;
+  background-color: #FCB305;
+  border-radius: 0.25em;
+  user-select: all;
+  text-align: center;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem 1rem;
+  width: auto;
+  font-size: 1rem;
+  line-height: 1.1rem;
+}
+
+.relative-size-icons {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 1rem auto 2rem auto;
+  font-size: 24px;
+}
+
+.relative-size-icons > i {
+  background-color: transparent;
+  user-select: none;
+  text-align: center;
+  padding: 0.1rem 0.1rem;
+  margin: 0;
+  width: auto;
+  height: auto;
+}
+
+.sub-header-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 24px 0;
+}
+
+.sub-header-info > p {
+  background-color: transparent;
+  text-align: center;
+  font-size: 0.8rem;
+  line-height: 0.9rem;
+  color: #222222;
+  width: auto;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  margin: 0 auto;
+}
+
+.new-section-tags-primary {
+  font-weight: 600;
+  color: #222222;
+  border: solid 1px #222222;
+}
+
+.new-section-16 > ul > li {
+  justify-content: center;
+  text-align: center;
+  padding: 8px;
+  width: 48px;
+}
+
+.new-section-20 > ul > li {
+  justify-content: center;
+  text-align: center;
+  padding: 12px;
+  width: 56px;
+}
+
+.new-section-24 > ul > li {
+  justify-content: center;
+  text-align: center;
+  padding: 16px;
+  width: 64px;
+}
+
+.new-section-32 > ul > li {
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  width: 80px;
+}
+
+.new-section-40 > ul > li {
+  justify-content: center;
+  text-align: center;
+  padding: 24px;
+  width: 96px;
+}
+
+.new-section-48 > ul > li {
+  justify-content: center;
+  text-align: center;
+  padding: 28px;
+  width: 108px;
+}
+
+.new-section-48 .o9con-bg > ul > li {
+  justify-content: center;
+  text-align: center;
+  padding: 28px;
+  width: 108px;
+}
+
+.code-block {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0px auto 2rem auto;
+}
+
+.code-block > p {
+  background-color: #FCB305;
+  border-radius: 0.25em;
+  user-select: all;
+  text-align: center;
+  padding: 0.75rem 1rem;
+  margin: 0.75rem 1rem;
+  width: auto;
+  font-size: 1.2rem;
+  line-height: 1.3rem;
+  font-family: "Inconsolata", monospace;
+}
+
+.o-60 {
+  opacity: 0.6;
+}
+
+footer {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  height: 3rem;
+  padding: 0.25rem 1rem;
+  margin: 3rem 0 0 0;
+  background-color: #2864FF;
+}
+
+footer > p {
+  font-size: 0.7rem;
+  line-height: 0.8rem;
+  color: #FFFFFF;
+}
+
+footer > p > span {
+  font-weight: 600;
+}
+
+.place-start {
+  text-align: left;
+}
+
+.place-end {
+  text-align: right;
+}
+
+/* --------------------------------
+
+o9con Web Font
+Version: 1.0
+Author: Atul Meshram
+
+-------------------------------- */
+@font-face {
+  font-family: "o9con";
+  src: url("../../fonts/o9con.eot");
+  src: url("../../fonts/o9con.eot") format("embedded-opentype"), url("../../fonts/o9con.woff2") format("woff2"), url("../../fonts/o9con.woff") format("woff"), url("../../fonts/o9con.ttf") format("truetype"), url("../../fonts/o9con.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/*------------------------
+	base class definition
+-------------------------*/
+.o9con {
+  display: inline-block;
+  font: normal normal normal 1em/1 "o9con";
+  speak: none;
+  text-transform: none;
+  /* Better Font Rendering */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/*------------------------
+  change icon size
+-------------------------*/
+/* relative units */
+.o9con-sz-xs {
+  font-size: 0.75em;
+}
+
+.o9con-sz-sm {
+  font-size: 0.875em;
+}
+
+.o9con-sz-lg {
+  font-size: 1.33em;
+}
+
+.o9con-sz-2x {
+  font-size: 2em;
+}
+
+.o9con-sz-3x {
+  font-size: 3em;
+}
+
+.o9con-sz-4x {
+  font-size: 4em;
+}
+
+.o9con-sz-5x {
+  font-size: 5em;
+}
+
+.o9con-sz-6x {
+  font-size: 6em;
+}
+
+.o9con-sz-7x {
+  font-size: 7em;
+}
+
+.o9con-sz-8x {
+  font-size: 8em;
+}
+
+.o9con-sz-9x {
+  font-size: 9em;
+}
+
+.o9con-sz-10x {
+  font-size: 10em;
+}
+
+/* absolute units */
+.o9con-16 {
+  font-size: 16px;
+}
+
+.o9con-20 {
+  font-size: 20px;
+}
+
+.o9con-24 {
+  font-size: 24px;
+}
+
+.o9con-32 {
+  font-size: 32px;
+}
+
+.o9con-40 {
+  font-size: 40px;
+}
+
+.o9con-48 {
+  font-size: 48px;
+}
+
+/*----------------------------------
+  add a square/circle background
+-----------------------------------*/
+.o9con-bg-color {
+  background-color: #333;
+}
+
+.o9con-text-color {
+  color: #fff;
+}
+
+.o9con-bg-sqr, .o9con-bg-sqr-smooth,
+.o9con-bg-cir {
+  padding: 0.33em;
+}
+
+.o9con-bg-sqr {
+  border-radius: 0;
+}
+
+.o9con-bg-sqr-smooth {
+  border-radius: 0.25em;
+}
+
+.o9con-bg-cir {
+  border-radius: 50%;
+}
+
+.o9con-bg-border {
+  border: solid 1.5px #333;
+}
+
+/*------------------------------------
+  use icons as list item markers
+-------------------------------------*/
+.o9con-ul {
+  padding-left: 0;
+  list-style-type: none;
+}
+.o9con-ul > li {
+  display: flex;
+  align-items: flex-start;
+  line-height: 1.4;
+}
+.o9con-ul > li > .o9con {
+  margin-right: 0.4em;
+  line-height: inherit;
+}
+
+/*------------------------
+  animated icons
+-------------------------*/
+.o9con-anim-spin {
+  -webkit-animation: o9con-spin 2s infinite linear;
+  -moz-animation: o9con-spin 2s infinite linear;
+  animation: o9con-spin 2s infinite linear;
+}
+
+@-webkit-keyframes o9con-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+  }
+}
+@-moz-keyframes o9con-spin {
+  0% {
+    -moz-transform: rotate(0deg);
+  }
+  100% {
+    -moz-transform: rotate(360deg);
+  }
+}
+@keyframes o9con-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+.o9con-anim-pulse {
+  -webkit-animation: o9con-pulse 1s ease infinite;
+  -moz-animation: o9con-pulse 1s ease infinite;
+  animation: o9con-pulse 1s ease infinite;
+}
+
+@-webkit-keyframes o9con-pulse {
+  0% {
+    -webkit-transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.3);
+  }
+  100% {
+    -webkit-transform: scale(1);
+  }
+}
+@-moz-keyframes o9con-pulse {
+  0% {
+    -moz-transform: scale(1);
+  }
+  50% {
+    -moz-transform: scale(1.3);
+  }
+  100% {
+    -moz-transform: scale(1);
+  }
+}
+@keyframes o9con-pulse {
+  0% {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.3);
+    -moz-transform: scale(1.3);
+    -ms-transform: scale(1.3);
+    -o-transform: scale(1.3);
+    transform: scale(1.3);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+  }
+}
+/*------------------------
+  rotated/flipped icons
+-------------------------*/
+.o9con-rotate-45 {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.o9con-rotate-90 {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  -ms-transform: rotate(90deg);
+  -o-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+
+.o9con-rotate-135 {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0);
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+.o9con-rotate-180 {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  -o-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+.o9con-rotate-225 {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0);
+  -webkit-transform: rotate(225deg);
+  -moz-transform: rotate(225deg);
+  -ms-transform: rotate(225deg);
+  -o-transform: rotate(225deg);
+  transform: rotate(225deg);
+}
+
+.o9con-rotate-270 {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+  -webkit-transform: rotate(270deg);
+  -moz-transform: rotate(270deg);
+  -ms-transform: rotate(270deg);
+  -o-transform: rotate(270deg);
+  transform: rotate(270deg);
+}
+
+.o9con-rotate-315 {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0);
+  -webkit-transform: rotate(315deg);
+  -moz-transform: rotate(315deg);
+  -ms-transform: rotate(315deg);
+  -o-transform: rotate(315deg);
+  transform: rotate(315deg);
+}
+
+.o9con-flip-x {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0);
+  -webkit-transform: scale(-1, 1);
+  -moz-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  -o-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+}
+
+.o9con-flip-y {
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+  -webkit-transform: scale(1, -1);
+  -moz-transform: scale(1, -1);
+  -ms-transform: scale(1, -1);
+  -o-transform: scale(1, -1);
+  transform: scale(1, -1);
+}
+
+/*------------------------
+	icons
+-------------------------*/
+.o9con-add::before {
+  content: "\ea02";
+}
+
+.o9con-arrow-up::before {
+  content: "\ea03";
+}
+
+.o9con-checkmark::before {
+  content: "\ea04";
+}
+
+.o9con-arrow-right::before {
+  content: "\ea05";
+}
+
+.o9con-arrow-down::before {
+  content: "\ea06";
+}
+
+.o9con-full-screen::before {
+  content: "\ea07";
+}
+
+.o9con-close::before {
+  content: "\ea08";
+}
+
+.o9con-config-alt::before {
+  content: "\ea09";
+}
+
+.o9con-logical-group::before {
+  content: "\ea0a";
+}
+
+.o9con-menu::before {
+  content: "\ea0b";
+}
+
+.o9con-minus::before {
+  content: "\ea0c";
+}
+
+.o9con-omni-direction-alt::before {
+  content: "\ea0d";
+}
+
+.o9con-arrow-left::before {
+  content: "\ea0e";
+}
+
+.o9con-lead-time::before {
+  content: "\ea0f";
+}
+
+.o9con-label::before {
+  content: "\ea10";
+}
+
+.o9con-priority::before {
+  content: "\ea11";
+}
+
+.o9con-search::before {
+  content: "\ea12";
+}
+
+.o9con-loader::before {
+  content: "\ea13";
+}
+
+/*# sourceMappingURL=style-o9.css.map */
